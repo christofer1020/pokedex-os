@@ -1,0 +1,1 @@
+{"damage_relations": {"double_damage_from": [{"name": "electric"}, {"name": "ice"}, {"name": "rock"}], "half_damage_from": [{"name": "grass"}, {"name": "fighting"}, {"name": "bug"}], "no_damage_from": [{"name": "ground"}]}}

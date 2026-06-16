@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0C0F16">
+<title>POKÉDEX OS</title>
+<link rel="preconnect" href="https://raw.githubusercontent.com">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="scene" id="scene" aria-hidden="true">
+  <div class="bg-tint" id="bgTint"></div>
+  <div class="bg-art" id="bgArt"></div>
+  <div class="scene-veil"></div>
+</div>
+
+<main id="device" class="device" data-mode="boot">
+
+  <!-- ============ LEFT: VIEW SCREEN PANEL ============ -->
+  <section class="panel panel-view" aria-label="View screen">
+    <div class="deck-top">
+      <div class="lens" aria-hidden="true"><span class="lens-glint"></span></div>
+      <div class="leds" aria-hidden="true">
+        <span class="led led-red"></span>
+        <span class="led led-amber"></span>
+        <span class="led led-green"></span>
+      </div>
+      <div class="brand">
+        <span class="brand-mark">POKÉDEX</span><span class="brand-os">OS</span>
+        <span class="brand-status" id="brandStatus">SYSTEM READY</span>
+      </div>
+    </div>
+
+    <div class="screen screen-view" id="view" role="region" aria-live="polite">
+      <!-- view content injected by app.js -->
+      <div class="boot">
+        <div class="boot-ball"></div>
+        <div class="boot-line">INITIALISING POKÉDEX OS…</div>
+      </div>
+    </div>
+
+    <div class="deck-bottom">
+      <button class="dpad" id="dpad" aria-label="Navigation pad">
+        <span class="dpad-arm dpad-up"   data-dir="up"></span>
+        <span class="dpad-arm dpad-down" data-dir="down"></span>
+        <span class="dpad-arm dpad-left" data-dir="left"></span>
+        <span class="dpad-arm dpad-right" data-dir="right"></span>
+        <span class="dpad-hub"></span>
+      </button>
+      <div class="deck-knobs">
+        <button class="knob knob-a" id="btnHome" aria-label="Back to grid" title="Back to grid">⌂</button>
+        <div class="speaker" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="hinge" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <!-- ============ RIGHT: DATA SCREEN PANEL ============ -->
+  <section class="panel panel-data" aria-label="Data screen">
+    <div class="screen screen-data">
+      <div class="data-inner" id="data">
+        <!-- data content injected by app.js -->
+      </div>
+    </div>
+    <div class="deck-right" aria-hidden="true">
+      <span class="bolt"></span><span class="bolt"></span>
+      <span class="grille"></span>
+    </div>
+  </section>
+
+</main>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script src="/app.js"></script>
+</body>
+</html>

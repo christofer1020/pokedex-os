@@ -1,0 +1,15 @@
+[
+  {
+    "location_area": {"name": "kanto-route-1-area", "url": "https://pokeapi.co/api/v2/location-area/295/"},
+    "version_details": [
+      {
+        "version": {"name": "red"},
+        "max_chance": 50,
+        "encounter_details": [
+          {"chance": 50, "max_level": 4, "min_level": 2, "method": {"name": "walk"}, "condition_values": []},
+          {"chance": 20, "max_level": 5, "min_level": 3, "method": {"name": "walk"}, "condition_values": [{"name": "time-morning"}]}
+        ]
+      }
+    ]
+  }
+]
